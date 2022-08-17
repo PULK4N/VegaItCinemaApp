@@ -1,0 +1,31 @@
+.show-password {
+  text-align: right;
+  align-items: flex-end;
+  background-color: aliceblue;
+  border-color: black;
+  flex-direction: row;
+}
+
+.alignleft {
+  float: left;
+}
+.alignright {
+  float: right;
+}
+
+.center {
+  float: right;
+  text-align: center;
+}
+
+h1 {
+  align-items: "right";
+}
+
+body {
+  background-color: #2456;
+}
+
+.link-forgot-password {
+  color: white;
+}

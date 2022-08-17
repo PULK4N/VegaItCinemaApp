@@ -1,0 +1,30 @@
+version: "3.3"
+
+# x-logging: &fluent-bit
+#   driver: fluentd
+#   options:
+#     fluentd-address: 127.0.0.1:24224
+
+services:
+  cinemaapp-service:
+    image: cinemaapp-aspnetcore:v1
+    build:
+      context: .
+      dockerfile: ./CinemaApp/Dockerfile
+    ports:
+      - 7160:7160
+    restart: on-failure
+    # logging: *fluent-bit
+
+  # client:
+  #   container_name: client
+  #   build:
+  #     context: .
+  #     dockerfile: ./client-react/Dockerfile
+  #   volumes:
+  #     - "./client:/app"
+  #     - "/app/node_modules"
+  #   ports:
+  #     - 3001:3000
+  #   environment:
+  #     - CHOKIDAR_USEPOLLING=true
